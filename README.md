@@ -11,5 +11,5 @@ Use command line interface:
 Usage: sstgb <command> <parameter>
 
 Commands:
---sendtext <text>        Send text to chat
---sendpic  <filename>    Send picture to chat
+sendtext <text>        Send text to chat
+sendpic  <filename>    Send picture to chat
