@@ -8,8 +8,8 @@ Put two text files in the directory with bot:
 2) .group - text file where first string is chat ID
 
 ## Command line interface
-sstgb <command> <parameter>
+`sstgb <command> <parameter>`
 
 ## Commands:
-`--sendtext <text>        Send text to chat
---sendpic  <filename>    Send picture to chat`
+```--sendtext <text>        Send text to chat```
+```--sendpic  <filename>    Send picture to chat```
