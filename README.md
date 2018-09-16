@@ -7,9 +7,9 @@ Put two text files in the directory with bot:
 1) .token - text file where first string is telegram bot ID
 2) .group - text file where first string is chat ID
 
-Use command line interface:
-Usage: sstgb <command> <parameter>
+## Command line interface
+sstgb <command> <parameter>
 
-Commands:
-sendtext <text>        Send text to chat
-sendpic  <filename>    Send picture to chat
+## Commands:
+`--sendtext <text>        Send text to chat
+--sendpic  <filename>    Send picture to chat`
