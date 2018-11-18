@@ -40,7 +40,7 @@ printf(
 		"Commands:\n"
 		"--sendtext  <text>       Send text to user ID\n"
 		"--sendpic   <filename>   Send picture to user ID\n"
-		"--senddoc   <filename>   Send picture to user ID\n"
+		"--senddoc   <filename>   Send document to user ID\n"
 		"--sendvideo <filename>   Send video to user ID\n"
 		"--sendaudio <filename>   Send audio to user ID\n"
 		"\n"
