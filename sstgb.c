@@ -172,7 +172,7 @@ printf(
 				"--comment <text>         Comment for picture/audio/video\n"
 				"--unescape               Process escape sequences for 'comment' and 'text' (bash-style)\n"
 				"\n"
-				"Bot network options:\n"
+				"Options for network:\n"
 				"--proxy <addr>           Use libcurl proxy. Examples: socks5://addr.org:8564 or http://addr.org:8564\n"
 				"--proxyauth <user:pass>  Specify username and password for proxy\n"
 				"\n"
@@ -378,8 +378,8 @@ if ((sstgbconf.imgfile != NULL) && !access(sstgbconf.imgfile, R_OK)) {
 			sstgbconf.comment, false, 0, NULL);
 	if (ret != TELEBOT_ERROR_NONE) {
 		printf("Failed to send picture: %d \n", ret);
-		if (sstgbconf.isRemove == 2) remove(sstgbconf.imgfile);
 	} else if (sstgbconf.isRemove == 1) remove(sstgbconf.imgfile);
+	if (sstgbconf.isRemove == 2) remove(sstgbconf.imgfile);
 }
 
 if ((sstgbconf.videofile != NULL) && !access(sstgbconf.videofile, R_OK)) {
@@ -387,8 +387,9 @@ if ((sstgbconf.videofile != NULL) && !access(sstgbconf.videofile, R_OK)) {
 			true, 0, 0, 0, sstgbconf.comment, false, 0, NULL);
 	if (ret != TELEBOT_ERROR_NONE) {
 		printf("Failed to send video: %d \n", ret);
-		if (sstgbconf.isRemove == 2) remove(sstgbconf.videofile);
+		
 	} else if (sstgbconf.isRemove == 1) remove(sstgbconf.videofile);
+	if (sstgbconf.isRemove == 2) remove(sstgbconf.videofile);
 }
 
 if ((sstgbconf.audiofile != NULL) && !access(sstgbconf.audiofile, R_OK)) {
@@ -396,17 +397,18 @@ if ((sstgbconf.audiofile != NULL) && !access(sstgbconf.audiofile, R_OK)) {
 			true, 0, NULL, sstgbconf.comment, false, 0, NULL);
 	if (ret != TELEBOT_ERROR_NONE) {
 		printf("Failed to send audio: %d \n", ret);
-		if (sstgbconf.isRemove == 2) remove(sstgbconf.audiofile);
+		
 	} else if (sstgbconf.isRemove == 1) remove(sstgbconf.audiofile);
+	if (sstgbconf.isRemove == 2) remove(sstgbconf.audiofile);
 }
 
 if ((sstgbconf.docfile != NULL) && !access(sstgbconf.docfile, R_OK)) {
 	ret = telebot_send_document(handle, sstgbconf.user_id, sstgbconf.docfile,
 			true, false, 0, NULL);
 	if (ret != TELEBOT_ERROR_NONE) {
-		printf("Failed to send document: %d \n", ret);
-		if (sstgbconf.isRemove == 2) remove(sstgbconf.docfile);
+		printf("Failed to send document: %d \n", ret);		
 	} else if (sstgbconf.isRemove == 1) remove(sstgbconf.docfile);
+	if (sstgbconf.isRemove == 2) remove(sstgbconf.docfile);
 }
 
 // Free resources
