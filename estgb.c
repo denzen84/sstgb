@@ -279,7 +279,7 @@ void printHelp(void) {
 					"\n"
 					"Options for file processing:\n"
 					"--wildcard      Process <filename> as wildcard instead of single file\n"
-					"--mediagroup    Send multiple pictures as media group (when 2-10 items are exists)\n"
+					"--mediagroup    Send multiple pictures as media group (when 2-10 items are exist)\n"
 					"--remove        Remove(!) file after use for --sendpic, --sendvideo, --sendaudio, --senddoc\n"
 					"--force-remove  Force remove(!) file after use even(!) error occured while send operation\n"
 					"\n"
